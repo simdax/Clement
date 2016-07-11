@@ -1,15 +1,16 @@
 // test
 
-Pdef(\basseMieux).play
+//Pn(Pdef(\basseMieux)).play
 
 (
 Pdef(\all,
 	Psym([
-		[\mel, \basseMieux]
+		[\mel,
+		\basseMieux	,
+			\acc]
 	].pseq(inf))
-).quant_(16);
-)
-(
+).quant_(0);
+
 Pdef(\all).play;
 
 )

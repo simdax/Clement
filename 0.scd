@@ -26,6 +26,7 @@ var basse=[0, 4, 1,4,2,5,3,4];
 
 var r=2;
 
+~basse=basse;
 
 Pdef(\basse,
 	Pbind(
@@ -46,18 +47,18 @@ Pdef(\basse,
 Pdef(\basseMieux, Pbind(
 	\gate, false,
 	\degree, basse.pseq +.x Pseq([0, Pxrand([0,2,4], 3)])
-	// +.x	Plazy{ arg envir;
-	// 	var res=[0, [0, 1]].choose;
-	// 	if(res.isArray)
-	// 	{
-	// 		envir.gate=true;
-	// 		res.pseq
-	// 	}
-	// 	{
-	// 		envir.gate=false;
-	// 		res				
-	// 	}
-	// }
+	+.x	Plazy{ arg envir;
+		var res=[0, [0, 1], [-1,0]].choose;
+		if(res.isArray)
+		{
+			envir.gate=true;
+			res.pseq
+		}
+		{
+			envir.gate=false;
+			res				
+		}
+	}
 	,
 	\degree, Pif(Pkey(\degree)>10, Pkey(\degree)-7, Pkey(\degree)),
 	\octave, 3, 
