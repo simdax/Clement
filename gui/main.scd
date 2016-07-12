@@ -1,21 +1,16 @@
 (
+Window.closeAll;
+Pdef.removeAll;
 
-"front.scd".loadRelative;
-w.postln;
-PdefGui(Pdef(\harmo), parent: w, numItems:2);
-EZPopUpMenu(w,
-	label:"fichier synth",
-	items:PathName("../synth".resolveRelative)
-	.entries.collect({|x| var file=x.fileName;
-		var p=thisProcess.nowExecutingPath;
-		(p+/+"../../synth"+/+file).postln;
-		file -> {
-			(p+/+"../../synth"+/+file).load;
-		}
-	})
+w=Window("bouya", Rect(0, 0, 400, 400)).front; w.addFlowLayout;
+
+// zyn go!
+~zynPath="~/.local/share/zynaddsubfx/zynaddsubfx-instruments/examples/";
+"zynaddsubfx -U -P 1234".unixCmd;
+
+
+"harmo/*".resolveRelative.loadPaths;
+"mel/*".resolveRelative.loadPaths;
+"synthGui.scd".loadRelative
 )
-
-
-)
-
 
