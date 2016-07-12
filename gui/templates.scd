@@ -9,21 +9,21 @@ Pdef(\mel, Pbind(
 		Pfunc
 		{arg e; (e.acc ? [0,2,4])}
 	)
-	+.x Plazy{ arg e; ( e.appo ? 0 ).asArray.pseq} 
+	+.x Plazy{ arg e; ( e.app ? 0 ).asArray.pseq} 
 )
 );
 
+~basse=0;
 Pdef(\harmo,
-	Pbind(\basse, Pwhite(0,6),
+	Pbind(\basse, Prand([1,3,5], inf),
 		\dur, Pfunc{arg e; e.dur},
-		\acc, (Pkey(\basse)+[0,2,4]),
+		\acc, Pchords2(Pkey(\basse)),
 		\do, Pfunc{|x|
-			"harmo! ".post;
+			"basse + renv ".post;
+			~basse=((~basse?0)+x.basse%7).postln;
 			~harmo=x.acc.postln }
 	)
-).set(\dur, 1)
-.gui.parent.alwaysOnTop_(true)
+).set(\dur, 1);
+
 
 )
-
-
