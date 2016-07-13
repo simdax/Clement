@@ -1,0 +1,42 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.4.2" name="defaultJackBay">
+ <output-sockets>
+  <socket type="jack-audio" exclusive="off" client="zynaddsubfx" name="zynaddsubfx">
+   <plug>out_1</plug>
+   <plug>out_2</plug>
+  </socket>
+  <socket type="alsa-midi" exclusive="off" client="Midi Through" name="Midi Through">
+   <plug>Midi Through Port-0</plug>
+  </socket>
+  <socket type="alsa-midi" exclusive="off" client="SuperCollider" name="SuperCollider">
+   <plug>out0</plug>
+   <plug>out1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket type="jack-audio" exclusive="off" client="system" name="system">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
+  <socket type="jack-midi" exclusive="off" client="zynaddsubfx" name="zynaddsubfx">
+   <plug>osc</plug>
+  </socket>
+  <socket type="alsa-midi" exclusive="off" client="Midi Through" name="Midi Through">
+   <plug>Midi Through Port-0</plug>
+  </socket>
+  <socket type="alsa-midi" exclusive="off" client="ZynAddSubFX" name="ZynAddSubFX">
+   <plug>ZynAddSubFX</plug>
+  </socket>
+  <socket type="alsa-midi" exclusive="off" client="SuperCollider" name="SuperCollider">
+   <plug>in0</plug>
+   <plug>in1</plug>
+   <plug>in2</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable input="system" output="zynaddsubfx" type="jack-audio"/>
+  <cable input="ZynAddSubFX" output="SuperCollider" type="alsa-midi"/>
+ </cables>
+</patchbay>
+
