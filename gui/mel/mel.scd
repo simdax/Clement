@@ -2,6 +2,7 @@
 Pdef(\mel, Pbind(
 	\type, \midi, \midiout, MIDIOut(0),
 	\degree,
+	Pfunc{arg e;  e.mel} +
 	PdegreeToKey(
 		Pfunc
 		{arg e;	(e.arp ? 0 )},
@@ -17,6 +18,6 @@ Pdef(\mel, Pbind(
 		e.dur.asArray.pseq
 		*.x (e.orn!e.orn).reciprocal.pseq
 	})
-).trace
+)
 );
 )
