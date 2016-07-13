@@ -1,4 +1,6 @@
 (
+MIDIClient.init;
+
 Window.closeAll;
 Pdef.removeAll;
 
@@ -12,13 +14,24 @@ w.addFlowLayout;
 r{
 	"killall zynaddsubfx".unixCmd;
 	0.2.wait;
-	("zynaddsubfx -P "++~zynPort).unixCmd
+	("zynaddsubfx --auto-connect -P "++~zynPort).unixCmd;
+	1.wait;
+	{
+		var port=MIDIClient.destinations
+		.detectIndex({arg x;
+			x.name=="ZynAddSubFX"});
+		MIDIOut.connect(0,port)
+	}.value;
+
 }.play;
 
+//core
 "harmo mel forme".split($ ).do { |x|
     (x++"/*").resolveRelative.loadPaths;
 };
-"synthGui.scd".postln.loadRelative;
+
+//music
+"synthGui.scd".loadRelative;
 "morceau/0.scd".loadRelative;
 )
 
