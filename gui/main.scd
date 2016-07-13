@@ -2,15 +2,23 @@
 Window.closeAll;
 Pdef.removeAll;
 
-w=Window("bouya", Rect(0, 0, 400, 400)).front; w.addFlowLayout;
+w=Window("bouya", Rect(0, 0, 300, 330)).front;
+w.addFlowLayout;
 
+~harmo=[0,2,4];
 // zyn go!
 ~zynPath="~/.local/share/zynaddsubfx/zynaddsubfx-instruments/examples/";
-"zynaddsubfx -U -P 1234".unixCmd;
+~zynPort=12341;
+r{
+	"killall zynaddsubfx".unixCmd;
+	0.2.wait;
+	("zynaddsubfx -P "++~zynPort).unixCmd
+}.play;
 
-
-"harmo/*".resolveRelative.loadPaths;
-"mel/*".resolveRelative.loadPaths;
-"synthGui.scd".loadRelative
+"harmo mel forme".split($ ).do { |x|
+    (x++"/*").resolveRelative.loadPaths;
+};
+"synthGui.scd".postln.loadRelative;
+"morceau/0.scd".loadRelative;
 )
 
