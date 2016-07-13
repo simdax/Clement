@@ -1,28 +1,32 @@
 (
-MIDIClient.init;
 
 Window.closeAll;
 Pdef.removeAll;
+~harmo=[0,2,4];
 
 w=Window("bouya", Rect(0, 0, 300, 330)).front;
 w.addFlowLayout;
 
-~harmo=[0,2,4];
+
+
 // zyn go!
-~zynPath="~/.local/share/zynaddsubfx/zynaddsubfx-instruments/examples/";
+~zynPath="../synth".resolveRelative;
 ~zynPort=12341;
 r{
+	var port;
 	"killall zynaddsubfx".unixCmd;
 	0.2.wait;
 	("zynaddsubfx --auto-connect -P "++~zynPort).unixCmd;
 	1.wait;
-	{
-		var port=MIDIClient.destinations
+	MIDIClient.init;
+	while{
+		port=MIDIClient.destinations
 		.detectIndex({arg x;
 			x.name=="ZynAddSubFX"});
-		MIDIOut.connect(0,port)
-	}.value;
-
+		port.isNil
+	}
+	{0.2.yield};
+	MIDIOut.connect(0,port)
 }.play;
 
 //core

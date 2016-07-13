@@ -1,5 +1,4 @@
 (
-~zynPath="../synth";
 EZPopUpMenu(w,
 	label:"fichier synth",
 	items:
@@ -14,5 +13,5 @@ EZPopUpMenu(w,
 			}
 		})
 	}).flat
-)
+);
 )
