@@ -2,7 +2,7 @@
 
 Window.closeAll;
 Pdef.removeAll;
-~harmo=[0,2,4];
+~harmo=[0,2,4]; i=0;
 
 w=Window("bouya", Rect(0, 0, 300, 330)).front;
 w.addFlowLayout;
@@ -16,7 +16,7 @@ r{
 	var port;
 	"killall zynaddsubfx".unixCmd;
 	0.2.wait;
-	("zynaddsubfx --auto-connect -P "++~zynPort).unixCmd;
+	("zynaddsubfx --auto-connect -U -I alsa -P "++~zynPort).unixCmd;
 	1.wait;
 	MIDIClient.init;
 	while{
@@ -25,7 +25,18 @@ r{
 			x.name=="ZynAddSubFX"});
 		port.isNil
 	}
-	{0.2.yield};
+	{
+		"searching".postln;
+		0.2.yield;
+		i=i+1; if(i > 15)
+		{
+			defer{StaticText(nil, Rect(300, 300, 100,100))
+			.string_("pas de connection avec Zyn, verifier connec")
+				.front};
+			4.wait;
+			0.exit;
+		};
+	};
 	MIDIOut.connect(0,port)
 }.play;
 
