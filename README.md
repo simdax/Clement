@@ -6,8 +6,7 @@ install.sh
 
 puis de lancer script.sc
 
-Normalement il y a une petite fenêtre
+Normalement il y a une petite fenêtre qui s'ouvre.
 
-les deux seules fonctions du truc pour l'instant devrait être
+Check l'image pour voir un peu des trucs
 
-1. en haut un bouton harmo qui change les accords qui
