@@ -6,9 +6,9 @@ var accR=[4,8,8,4].reciprocal;
 
 a=[
 	(
-		mel:mel, dur:r, orn:[1,2],
+		mel:mel, dur:r, orn: [1],  //[1,2],
 		mtranspose:Pn(Pstep( Pseries(7,-1,3), r.sum)),
-		//		acc:Pfunc{~harmo}
+		acc:[0,2,4],//acc:Pfunc{~harmo}
 	),
 	(arp:[0,1,2,3,4], dur:accR),
 	(arp:[[0,1,2],0,[0,1,2]])
