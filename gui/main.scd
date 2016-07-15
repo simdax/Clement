@@ -4,7 +4,8 @@ Window.closeAll;
 Pdef.removeAll;
 ~harmo=[0,2,4]; i=0;
 
-w=Window("bouya", Rect(0, 0, 300, 350)).front;
+w=Window("bouya", Rect(0, 0, 300, 350)).front
+.onClose_{("kill "++(~zynPid+2)).unixCmd};
 w.addFlowLayout;
 
 
@@ -54,7 +55,7 @@ w.view.decorator.nextLine;
 CheckBox(w, "quit ?".bounds.extent*2)
 .string_("quit ?")
 .action_{ arg s;
-	if(s.value){("kill "++(~zynPid+2)).unixCmd.postln};
+	if(s.value){("kill "++(~zynPid+2)).unixCmd};
 	w.close;
 };
 
