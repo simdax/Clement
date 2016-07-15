@@ -4,7 +4,7 @@ Window.closeAll;
 Pdef.removeAll;
 ~harmo=[0,2,4]; i=0;
 
-w=Window("bouya", Rect(0, 0, 300, 330)).front;
+w=Window("bouya", Rect(0, 0, 300, 350)).front;
 w.addFlowLayout;
 
 
@@ -16,7 +16,7 @@ r{
 	var port;
 	"killall zynaddsubfx".unixCmd;
 	0.2.wait;
-	("zynaddsubfx --auto-connect -U -I alsa -P "++~zynPort).unixCmd;
+	~zynPid=("zynaddsubfx --auto-connect -U -I alsa -P "++~zynPort).unixCmd;
 	1.wait;
 	MIDIClient.init;
 	while{
@@ -47,6 +47,17 @@ r{
 
 //music
 "synthGui.scd".loadRelative;
-"morceau/0.scd".loadRelative;
+"../morceau/0.scd".loadRelative;
+
+// quit Button
+w.view.decorator.nextLine;
+CheckBox(w, "quit ?".bounds.extent*2)
+.string_("quit ?")
+.action_{ arg s;
+	if(s.value){("kill "++(~zynPid+2)).unixCmd.postln};
+	w.close;
+};
+
+
 )
 
