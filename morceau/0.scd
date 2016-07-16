@@ -1,30 +1,31 @@
 (
-var mel=[7,6,5,4,2,7]-7;
-var r=[7,1,3,1,3,1]/4;
 
-var accR=[4,8,8,4].reciprocal;
+
+var accR=[16].reciprocal;
 
 a=[
 	(
-		mel:mel, dur:r, orn: [1],  //[1,2],
-		mtranspose:Pn(Pstep( Pseries(7,-1,3), r.sum)),
-		acc:[0,2,4],//acc:Pfunc{~harmo}
+		// mel:~pforme.((a:mel, b:mel2, z:fins), [\a!3, \b].flat).trace,
+		// mtranspose:Pstep(Pseq([Pseries(7,-1,3), 0]), r.sum),
+		// dur:Pseq([r.pseq(3), r2.pseq.trace], inf),
 	),
-	(arp:[0,1,2,3,4], dur:accR),
-	(arp:[[0,1,2],0,[0,1,2]])
+	(arp:[0,1,2, 3], dur:accR),
+	(arp:[[0,1,2,3],0,[0,1,2]])
 ];
 
-a.do { |x, i|
-Pbindef(i.asSymbol,
-	*x
-	.collect({|v, k|
-		k.switch(
-			\orn, Pstutter(v.pseq(inf), v.pseq(inf)),
-			\acc, v,
-			v.asArray.pseq(inf)
-		)
-	})
-	.asPairs
+a.do { |x, i| if(x.isEmpty.not, {
+	Pbindef(i.asSymbol,
+		*x
+		.collect({|v, k|
+			k.switch(
+				\orn, Pstutter(v.pseq(inf), v.pseq(inf)),
+				\acc, v,
+				\scale, v,
+				v.asArray.pseq(inf)
+			)
+		})
+		.asPairs
+	)}
 )
 };
 

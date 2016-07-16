@@ -47,8 +47,9 @@ r{
 };
 
 //music
+"../routineViteFait.scd".loadRelative;
 "synthGui.scd".loadRelative;
-"../morceau/0.scd".loadRelative;
+"../morceau/*".resolveRelative.loadPaths;
 
 // quit Button
 w.view.decorator.nextLine;

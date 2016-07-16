@@ -9,7 +9,8 @@
 		<> 
 		Pdef(x.asSymbol, Pbind(
 			\chan, x,
-			\acc, Pfunc{~harmo }
+			\acc, Pfunc{~harmo },
+			\scale, Pfunc{~scale}
 		)
 		)
 	).fadeTime_(5);
