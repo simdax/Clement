@@ -17,8 +17,16 @@ Pdefn(\rand, PlazyEnvir{ arg bob;
 		}
 	}
 });
-	
-Pbind(\bob, 4, \io,  Pdefn(\rand)<>(bob:5) ).trace.play
+
+p{ arg inval;
+	Pseq([20,53,20], inf).do{ arg x;
+		var nb=3;
+		Pfin(nb,
+						Pseed(x, Pwrand([0,1,2,3,4], [20,8,6,3,1].normalizeSum, nb)))
+		.asStream.embedInStream(inval)
+	}
+};
+//Pbind(\bob, 4, \io,  Pdefn(\rand)<>(bob:5) ).trace.play
 
 )
 
