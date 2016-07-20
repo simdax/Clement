@@ -23,9 +23,8 @@ Pdef(\_forme,
 		\formeP, PlazyEnvir{
 			arg forme=
 			Pclump(Prand((1..3), inf), Pxrand((..5), inf));
-			pforme.(forme, inf);
+			pforme.(forme.pseq, inf);
 		},
-		\dur, 1,
 		\do, Pfunc{ arg ev;
 		ev.formeP.do { |x|
 			if(Pdef(x).isPlaying, {
@@ -33,9 +32,9 @@ Pdef(\_forme,
 			}, {Pdef(x).play}
 			)};
 		}
+	).repeat
 )
-)
-.envir_((forme:[1,2,3,4]))
+.envir_((forme:[1,2,3,4], dur:4))
 .gui
 
 )

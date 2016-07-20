@@ -50,7 +50,7 @@ Pdef(\basse,
 			\dur, 2,
 			\do, Pfunc{arg a; ~basse=a.degree},
 		)
-	).trace
+	)
 ).quant_([4, 0, 0.001]);
 
 Pdef(\_mel,
