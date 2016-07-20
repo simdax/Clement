@@ -1,5 +1,5 @@
 (
-var a={r{ arg in;
+var a=r{ arg in;
 	var init=[];
 	loop{
 		var n=in.asArray;
@@ -7,36 +7,46 @@ var a={r{ arg in;
 		init=n;
 		in=(res.asArray).yield
 	}
-}};
+};
 
 var pforme={arg pattern;
-	var b=a.value;
 	var p=pattern.asStream, pval;
 	r{
-		while{pval=p.next; pval.notNil}
-		{b.next(pval).yield};
+		while{pval=p.next.postln; pval.notNil}
+		{pattern=a.next(pval).yield};
 	}
 };
 
 Pdef(\_forme,
-	Pbind(
-		\formeP, PlazyEnvir{
-			arg forme=
-			Pclump(Prand((1..3), inf), Pxrand((..5), inf));
-			pforme.(forme.pseq, inf);
-		},
-		\do, Pfunc{ arg ev;
-		ev.formeP.do { |x|
-			if(Pdef(x).isPlaying, {
-				Pdef(x).stop
-			}, {Pdef(x).play}
-			)};
-		}
-	).repeat
-)
-.envir_((forme:[1,2,3,4], dur:4))
-.gui
+	Pfset({a.reset},
+		Pbind(
+			\do, Pfunc{ arg ev;
+				ev.formeP.do { |x|
+					if(Pdef(x).isPlaying, {
+						Pdef(x).stop
+					}, {Pdef(x).play}
+					)};
+			}
+		)
+		<>
+		Pbind(
+			\formeP, 
+			p{ arg ev;
+				loop{
+					b=if(ev.forme.class!=False){ev.forme.pseq}
+					{Pclump(Prand((1..3), inf), Pxrand((..5), inf))};
+					ev=pforme.(b).embedInStream(ev);
+				}
+			},
+		).trace
+	)
+).envir_((forme:[1,2,3,4], dur:4));
 
+a ??{	
+PdefGui(
+	Pdef(\_forme), numItems:2
+)
+}
 )
 
 
