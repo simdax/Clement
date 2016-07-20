@@ -2,19 +2,20 @@
 // SuperCollider Workspace
 // =====================================================================
 
-.///TEMPO
 (
-r{
-	loop{
-	TempoClock.tempo=Env([1.2,2], [10]).asPseg.iter;
-	0.1.wait;
-}
-}.play
-)
+Pdef.removeAll; Window.closeAll;
+
+//recursive load
+f={arg p;
+	p.entries.do { |x|
+		if(x.postln.isFolder){f.value(x)}
+		{x.absolutePath.load}
+};
+}; f.value(PathName("./patterns".resolveRelative));
+
 
 
 /// BASIS
-(
 ~basse=0;
 
 if (~zyn.asBoolean.not){
@@ -28,37 +29,10 @@ if (~zyn.asBoolean.not){
 		~zyn=true;
 	}.play
 };
-Pdef(\midi, Pbind(\type, \midi, \midiout, MIDIOut(1)));
-Event.addEventType(\sfz, {
-	var amp=~amp.value; 
-	var note=~midinote.value;
-	if(amp<1){amp=60};
-	r{
-		~inst.noteOn(amp, note);
-		(~dur*~legato).wait;
-		~inst.noteOff(amp, note)
-	}.play	
-});
-Pdef(\sfz,
-	Pfset(
-		{ var ok=false;
-			~inst=a.prepare({ok=true});
-			while{ok.not}{0.1.wait};
-		},
-		Pbind(
-			\type, \sfz,
-		),
-		{a.free}
-	)
-);
-Pdef(\harmo,
-	Pbind(
-		\scale, Pfunc{~scale ? Scale.major}
-	)
-);
-Pdef(\out, 
+
+Pdef(\basse, 
 	Pchain(
-		Pdef(\midi),
+		Pdef(\_midi),
 		Pbind(
 			\octave, 3,
 			\degree, p{ arg inval;
@@ -74,14 +48,14 @@ Pdef(\out,
 			},
 			\legato, 1,
 			\dur, 2,
-			\do, Pfunc{arg a; ~basse=a.degree.postln},
+			\do, Pfunc{arg a; ~basse=a.degree},
 		)
-	)
-).quant_([4, 0, 0.01]);
+	).trace
+).quant_([4, 0, 0.001]);
 
-Pdef(\mel,
-	Pdef(\harmo)<>
-	Pdef(\midi)<>
+Pdef(\_mel,
+	Pdef(\_harmo)<>
+	Pdef(\_midi)<>
 	Pbind(
 		\octave, 6, \chan, 1,
 		\degree, PdegreeToKey(
@@ -102,9 +76,10 @@ Pdef(\mel,
 	)
 ).quant_([4, 0,0]);
 
+(..10).do { |x, i|
+Pdef(i, Pbindf(Pdef(\_mel), \chan, i)).quant_(4)
+};
 
+PdefAllGui().filtering_(true);//.parent.alwaysOnTop_(true)
 )
 
-PdefAllGui()
-
-~basse=4

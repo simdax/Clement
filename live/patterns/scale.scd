@@ -5,6 +5,11 @@ Pdefn(\scale,
 			~scale=Scale.lydian
 		}{Scale.major}
 	}
-)
+);
+Pdef(\_harmo,
+	Pbind(
+		\scale, Pfunc{~scale ? Scale.major}
+	)
+);
 
 )
