@@ -1,0 +1,439 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Jul 20 23:51:22 2016
+;; Desktop file format version 208
+;; Emacs version 25.1.50.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22415 62042 314332 248000) (desktop . "208") "simdax@ordi" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "WhiteSmoke") (background-color . "black") (mouse-color . "OrangeRed") (border-color . "gold") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground . "WhiteSmoke") (scroll-bar-background . "grey75") (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "orchid") (sticky) (environment) (frameset--id . "F93C-93F0-C494-54C1") (frameset--mini t . t) (height . 36) (width . 148) (modeline . t) (minibuffer . t) (unsplittable) (left . 1) (top . 4) (icon-name) (visibility . t) (display . ":1") (explicit-name)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 180) (min-pixel-height-ignore . 54) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1364) (pixel-height . 630) (total-width . 152) (total-height . 35) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 680) (pixel-height . 630) (total-width . 76) (total-height . 35) (normal-height . 1.0) (normal-width . 0.5) (buffer "theme.scd" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 552) (start . 41))) (leaf (last . t) (pixel-width . 684) (pixel-height . 630) (total-width . 76) (total-height . 35) (normal-height . 1.0) (normal-width . 0.5) (buffer "*SCLang:PostBuffer*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 4979) (start . 4979)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("extM" "trace" "tra" "0" "refre" "di" "a=" "pde"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/prog/clement/live/patterns/" "/home/simdax/prog/SC/ext/.git/COMMIT_EDITMSG" "~/prog/SC/ext/" "~/prog/SC/ext/midi.sc" "~/prog/SC/ext" "~/prog/SC/" "~/prog/SC/ext/" "~/prog/SC/ext/midi.sc" "~/prog/SC/ext/" "~/prog/SC/ext/midi.sc" "~/prog/SC/ext" "~/Dropbox/generative/quarks/toutPropre/ext/" "~/Dropbox/generative/" "~/prog/clement/live/patterns/" "~/prog/clement/live/patterns/theme.scd" "~/prog/clement/live/patterns/mel.scd" "~/prog/clement/live/patterns/forme" "~/prog/clement/live/patterns/forme/" "~/prog/clement/live/" "~/prog/clement/live/patterns/forme/front.scd" "~/prog/clement/live/patterns" "~/prog/clement/morceau/harmo/" "/home/simdax/prog/clement/.git/COMMIT_EDITMSG" "~/prog/clement/live/patterns/" "~/prog/clement/live/patterns/forme.scd" "~/prog/clement/live/" "~/sc/prog" "~/.local/share/SuperCollider/downloaded-quarks/patternsSC/Prenversement.sc" "~/prog/clement/orchestre/pbind.scd" "~/prog/clement/orchestre/load.scd" "~/.emacs.d/bookmarks" "~/sketchbook/musique/load.scd" "/usr/local/share/SuperCollider/SCClassLibrary/Common/Control/NetAddr.sc" "~/prog/python/testOSC.py" "~/prog/SC/MIDI/chrono.scd" "~/prog/SC/MIDI/echo.scd" "/usr/local/share/SuperCollider/SCClassLibrary/Common/GUI/PlusGUI/Math/PlotView.sc" "~/prog/SC/MIDI/tempoDect.scd" "~/prog/SC/MIDI/noteConv.scd" "~/prog/SC/MIDI/mathPoly/test.scd" "~/prog/SC/MIDI/midiConnec.scd" "/usr/local/share/SuperCollider/SCClassLibrary/Common/Control/ResponseDefs.sc" "/usr/local/share/SuperCollider/SCClassLibrary/Common/GUI/Base/Model.sc"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/theme.scd"
+  "theme.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode text-scale-mode)
+  552
+  '(629 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (603 653 621 620 826 773 378 594 531 428 395 301 190 190 190 190))))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/main.scd"
+  "main.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  536
+  '(322 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (783 469 387 398 387 387 594 637 624 714 581 783 783 566 377 536))))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/SC/ext/midi.sc"
+  "midi.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode auto-revert-mode)
+  333
+  '(1 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (332 265))))
+
+(desktop-create-buffer 208
+  nil
+  "ext"
+  'dired-mode
+  nil
+  230
+  '(nil nil)
+  t
+  '("/home/simdax/prog/SC/ext/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "MIDI"
+  'dired-mode
+  nil
+  179
+  '(nil nil)
+  t
+  '("/home/simdax/prog/SC/MIDI/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "SC"
+  'dired-mode
+  nil
+  235
+  '(nil nil)
+  t
+  '("/home/simdax/prog/SC/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "ressources"
+  'dired-mode
+  nil
+  186
+  '(nil nil)
+  t
+  '("/home/simdax/prog/SC/ressources/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/SC/ext/"
+  "ext"
+  'fundamental-mode
+  nil
+  1
+  '(nil nil)
+  t
+  nil
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "ext"
+  'dired-mode
+  nil
+  1152
+  '(159 nil)
+  t
+  '("/home/simdax/Dropbox/generative/quarks/toutPropre/ext/")
+  nil
+  '((mark-ring (159))))
+
+(desktop-create-buffer 208
+  "/home/simdax/Dropbox/generative/quarks/toutPropre/ext/extMIDI.sc"
+  "extMIDI.sc"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode)
+  14
+  '(18 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "generative"
+  'dired-mode
+  nil
+  313
+  '(nil nil)
+  t
+  '("/home/simdax/Dropbox/generative/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/forme/front.scd"
+  "front.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode)
+  310
+  '(17 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (186 267 317 395 395 110 391 40 242 395 395 78 242 242 242 310))))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/timbres/midi.scd"
+  "midi.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  241
+  '(123 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (123 241))))
+
+(desktop-create-buffer 208
+  nil
+  "timbres"
+  'dired-mode
+  nil
+  253
+  '(nil nil)
+  t
+  '("/home/simdax/prog/clement/live/patterns/timbres/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "patterns"
+  'dired-mode
+  nil
+  653
+  '(1 nil)
+  t
+  '("/home/simdax/prog/clement/live/patterns/")
+  nil
+  '((mark-ring (1 1 1 1))))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/mel.scd"
+  "mel.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  441
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Streams/FilterPatterns.sc"
+  "FilterPatterns.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  6104
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "forme"
+  'dired-mode
+  nil
+  310
+  '(nil nil)
+  t
+  '("/home/simdax/prog/clement/live/patterns/forme/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/forme/forme.scd"
+  "forme.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  117
+  '(271 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (719 131 661 659 719 271 718 244 156 488 488 488 601 601 610 117))))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/drums.scd"
+  "drums.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  606
+  '(606 t)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (443 401 443 442 402 401 401 443 402 401 434 401 593 593 694 677))))
+
+(desktop-create-buffer 208
+  nil
+  "live"
+  'dired-mode
+  nil
+  294
+  '(nil nil)
+  t
+  '("/home/simdax/prog/clement/live/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Collections/ArrayedCollection.sc"
+  "ArrayedCollection.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  3802
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/morceau/0.scd"
+  "0.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  311
+  '(311 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "morceau"
+  'dired-mode
+  nil
+  239
+  '(nil nil)
+  t
+  '("/home/simdax/prog/clement/morceau/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "harmo"
+  'dired-mode
+  nil
+  193
+  '(nil nil)
+  t
+  '("/home/simdax/prog/clement/morceau/harmo/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/morceau/mel.scd"
+  "mel.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/morceau/harmo.scd"
+  "harmo.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/morceau/harmo/find2Notes.scd"
+  "find2Notes.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  63
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/install.scd"
+  "install.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  103
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Control/MIDIOut.sc"
+  "MIDIOut.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  903
+  '(383 nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (383))))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Core/Boolean.sc"
+  "Boolean.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  1218
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/rand.scd"
+  "rand.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/simdax/prog/clement/live/patterns/basse.scd"
+  "basse.scd"
+  'sclang-mode
+  '(yas-minor-mode autopair-mode auto-complete-mode auto-revert-mode)
+  366
+  '(366 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (392 366 366 366))))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Core/Kernel.sc"
+  "Kernel.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  17041
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/local/share/SuperCollider/SCClassLibrary/Common/Collections/String.sc"
+  "String.sc"
+  'sclang-mode
+  '(yas-minor-mode auto-complete-mode)
+  7826
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
