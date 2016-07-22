@@ -7,3 +7,6 @@ var url="https://github.com.simdax";
 )
 
 
+//Quarks.install("https://github.com/snappizz/supercollider-sfz")
+
+
