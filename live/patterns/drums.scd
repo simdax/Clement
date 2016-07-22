@@ -5,7 +5,7 @@
 (
 
 var portBat=0;
-
+var a;
 ~searchMidi={ arg n;
 	var res=MIDIClient.destinations//do(_.post)
 	.detectIndex{|x|
@@ -16,7 +16,8 @@ var portBat=0;
 	}, {"pas trouvé".postln});
 };
 
-b ?? {b="hydrogen".unixCmd};
+a="ps -e | grep hydrogen".unixCmdGetStdOut;
+a.isEmpty.if {b="hydrogen".unixCmd};
 
 //~searchMidi.value(".ydrogen", portBat);
 
@@ -26,8 +27,8 @@ Pdef(\drums,
 		\midinote,
 		[40,40,50,40].pseq(inf),
 		\dur, Pseq([4], inf).reciprocal,
-		\amp, Env([0,1, 0], [8]).asPseg.repeat
-	).trace
+		\amp, Pseg(Pxrand([0,1], inf), 16).repeat
+	)
 ).quant_(4)
 
 
